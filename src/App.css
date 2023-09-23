@@ -1,38 +1,166 @@
 .App {
-  text-align: center;
+  display: flex;
+  flex-direction: row;
+  height: 100vh;
+  width: 100%;
+  font-family: "SoraRegular" !important;
+}
+.formSide {
+  width: 100% !important;
+  background: #f6f7fc;
+  height: 100%;
+  display: flex;
+  flex: 50% !important;
+  justify-content: center;
+}
+.formSide .header {
+  font-size: 25px;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+}
+.formSide .description {
+  padding-top: 15px;
+  margin-bottom: 1.5rem !important;
+  color: #878787;
+  font-weight: 300;
+  line-height: 1.5;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.form {
+  /* background: red; */
+  height: 100%;
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  width: 55%;
+  transform: translateY(-2%) !important;
 }
 
-.App-link {
-  color: #61dafb;
+label {
+  display: inline-block;
+  margin-bottom: 0.5rem;
+  display: flex;
+  align-items: center;
+}
+input {
+  outline: none;
+  border: 1.5px solid white;
+  -webkit-box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.1);
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+  height: 50px;
+  background: #fff;
+  display: block;
+  width: 100%;
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 1.5;
+  font-family: "SoraRegular" !important;
+  color: #495057;
+  text-indent: 20px;
+}
+input[type="submit"].button {
+  width: 100%;
+  text-indent: 0px !important;
+  box-shadow: none !important;
+  background: #191919;
+  color: #ffffff !important;
+  margin-top: 2rem !important;
+  cursor: pointer;
+  transition: opacity 0.1s ease-in-out !important;
+}
+input[type="submit"].button:active {
+  opacity: 0.1 !important;
+}
+.error {
+  color: rgb(255, 99, 99);
+  font-size: 14px;
+  /* margin-top: 5px; */
+  margin: 0;
+  padding: 0;
+}
+.error-container {
+  height: 20px;
+  overflow: hidden;
+  margin-top: 3px;
+}
+.first {
+  margin-bottom: 5px !important;
+}
+.error-input {
+  border: 1.5px solid rgb(255, 99, 99) !important;
+  outline: none;
+  transition: border 0.3s linear;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.imageSide {
+  width: 100%;
+  background: yellow;
+  height: 100%;
+  flex: 50% !important;
+  background: url("./bg.jpeg"); /*Replace with the image of your choice */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.container {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+@media (min-width: 576px) {
+  .container {
+    width: 540px;
   }
-  to {
-    transform: rotate(360deg);
+}
+@media (min-width: 768px) {
+  .container {
+    width: 720px;
+  }
+}
+@media (min-width: 992px) {
+  .container {
+    width: 960px;
+  }
+}
+@media (min-width: 1200px) {
+  .container {
+    width: 1140px;
+  }
+}
+@media (max-width: 570px) {
+  .container {
+    width: 100% !important;
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+  }
+  .imageSide {
+    display: none !important;
+  }
+  .form {
+    /* background: red; */
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* align-items: center; */
+    width: 85% !important;
+    transform: translateY(-2%) !important;
+  }
+  .formSide .header {
+    font-size: 23px;
+    margin-bottom: 0.5rem;
+  }
+  .formSide .description {
+    font-size: 15px !important;
+  }
+  input {
+    text-indent: 10px !important;
+  }
+  input[type="submit"].button {
+    text-indent: 0px !important;
   }
 }
