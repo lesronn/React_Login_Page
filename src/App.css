@@ -78,6 +78,7 @@ select {
   width: 100%;
   padding-top: 20px;
   font-size: inherit !important;
+  background-color: none !important;
 }
 
 a {
