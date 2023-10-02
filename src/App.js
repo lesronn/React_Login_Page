@@ -172,10 +172,10 @@ function App() {
                   style={{ paddingLeft: inputFocused ? 7 : 0 }}
                   type="tel"
                   placeholder={inputFocused ? "" : "Phone number"}
-                  onChange={formik.handleChange}
-                  onBlur={handleInputBlur}
-                  onFocus={handleInputFocus}
-                  value={formik.values.phone}
+                  // onChange={formik.handleChange}
+                  // onBlur={handleInputBlur}
+                  // onFocus={handleInputFocus}
+                  // value={formik.values.phone}
                   autoCapitalize="off"
                 />
               </div>
