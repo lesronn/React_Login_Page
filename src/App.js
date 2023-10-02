@@ -168,7 +168,6 @@ function App() {
                 )}
                 <input
                   name="phone"
-                  inputMode="tel"
                   maxLength={9}
                   style={{ paddingLeft: inputFocused ? 7 : 0 }}
                   type="tel"
@@ -177,6 +176,7 @@ function App() {
                   onBlur={handleInputBlur}
                   onFocus={handleInputFocus}
                   value={formik.values.phone}
+                  autoCapitalize="off"
                 />
               </div>
             </div>
