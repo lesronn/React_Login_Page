@@ -5,7 +5,20 @@
   width: 100%;
   font-family: "SoraRegular" !important;
 }
-.formSide {
+.NewApp {
+  /* background: red; */
+  width: 100% !important;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.LoginFormContainer {
+  width: 70% !important;
+  /* background: yellow; */
+}
+/* .formSide {
   width: 100% !important;
   background: #f6f7fc;
   height: 100%;
@@ -24,25 +37,119 @@
   color: #878787;
   font-weight: 300;
   line-height: 1.5;
-}
+} */
 
-.form {
-  /* background: red; */
+/* .form {
   height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   width: 55%;
   transform: translateY(-2%) !important;
-}
-
+} */
+/* 
 label {
   display: inline-block;
   margin-bottom: 0.5rem;
   display: flex;
   align-items: center;
+} */
+.formField {
+  width: 100%;
+  border: 1px solid #d9d9d9;
+  border-radius: 8px;
+  height: max-content;
+  overflow: hidden !important;
+}
+.countryPicker {
+  /* display: flex;
+  flex-direction: row; */
+  /* width: 100%; */
+  /* justify-content: space-between; */
+  height: 56px;
+
+  padding: 0px 15px;
+}
+
+select {
+  outline: none !important;
+  border: none;
+  height: 100%;
+  width: 100%;
+  padding-top: 20px;
+  font-size: inherit !important;
+}
+
+a {
+  color: black;
+  font-weight: bold;
+}
+.privacyText {
+  font-size: 0.75rem !important;
+  padding: 10px 0;
+  line-height: 1rem !important;
+  color: rgb(34, 34, 34) !important;
+}
+.textContainer {
+  padding-left: 20px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 2px !important;
+  justify-content: center;
+}
+.newAppheader {
+  font-size: 1.375rem !important;
+  line-height: 1.625rem !important;
+  color: rgb(34, 34, 34) !important;
+  font-weight: 600 !important;
+  margin-bottom: 30px !important;
+}
+
+.countryLabel {
+  font-size: 12px;
+  color: grey;
+  position: absolute;
+  padding-top: 5px;
 }
 input {
+  height: inherit !important;
+  outline: none !important;
+  border: none !important;
+  width: 100% !important;
+  /* text-indent: 20px; */
+
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 1.5;
+
+  /* font-family: "SoraRegular" !important; */
+}
+.prefix {
+  font-size: 18px;
+  align-self: center !important;
+}
+.line-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: grey !important;
+  font-size: 0.75rem !important; /* You can adjust the font size as needed */
+  margin: 20px 0;
+}
+
+.left-line,
+.right-line {
+  flex-grow: 1;
+  height: 1px; /* Adjust the height of the lines */
+  background-color: rgb(221, 221, 221); /* Adjust the line color */
+}
+
+.content {
+  padding: 0 15px; /* Adjust the padding to control the space between text and lines */
+}
+
+/* input {
   outline: none;
   border: 1.5px solid white;
   -webkit-box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.1);
@@ -58,8 +165,8 @@ input {
   font-family: "SoraRegular" !important;
   color: #495057;
   text-indent: 20px;
-}
-input[type="submit"].button {
+} */
+/* input[type="submit"].button {
   width: 100%;
   text-indent: 0px !important;
   box-shadow: none !important;
@@ -71,13 +178,41 @@ input[type="submit"].button {
 }
 input[type="submit"].button:active {
   opacity: 0.1 !important;
+} */
+
+input[type="submit"].button {
+  width: 100%;
+  text-indent: 0px !important;
+  box-shadow: none !important;
+  background: linear-gradient(120deg, #fd5c63, #c30b03);
+  color: #ffffff !important;
+  margin-top: 1rem !important;
+  cursor: pointer;
+  transition: opacity 0.1s ease-in-out !important;
+  border-radius: 8px;
+  height: 50px !important;
 }
+input[type="submit"].button:active {
+  opacity: 0.99 !important;
+  transform: scale(0.99);
+}
+.phoneNumberContainer {
+  display: flex;
+  flex-direction: row;
+  height: 56px !important;
+  padding-left: 20px;
+  overflow: hidden !important;
+  border-bottom-right-radius: 8px;
+  border-bottom-left-radius: 8px;
+  border-top: 1px solid #d9d9d9;
+}
+
 .error {
   color: rgb(255, 99, 99);
   font-size: 14px;
-  /* margin-top: 5px; */
-  margin: 0;
-  padding: 0;
+  margin-top: 5px;
+  display: flex;
+  align-items: center;
 }
 .error-container {
   height: 20px;
@@ -87,10 +222,45 @@ input[type="submit"].button:active {
 .first {
   margin-bottom: 5px !important;
 }
-.error-input {
+.socialBtn {
+  width: 100%;
+  background: #ffffff;
+  color: #191919 !important;
+  margin-top: 1rem !important;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: opacity 0.1s ease-in-out !important;
+  border-radius: 8px;
+  height: 50px !important;
+  border: 1.5px solid #191919 !important;
+  display: flex;
+  align-items: center;
+  text-align: center !important;
+  /* justify-content: center; */
+}
+.socialBtn:active {
+  opacity: 0.99 !important;
+  transform: scale(0.99);
+}
+.socialIcon {
+  height: 25px;
+  width: 25px;
+  transform: translateX(100%);
+}
+.socialBtnText {
+  width: 85%;
+  /* text-align: center; */
+  /* align-self: center; */
+}
+/* .error-input {
   border: 1.5px solid rgb(255, 99, 99) !important;
   outline: none;
   transition: border 0.3s linear;
+} */
+.error-input {
+  border: 2px solid rgb(255, 99, 99) !important;
+  outline: none;
+  transition: border 1ms linear;
 }
 
 .imageSide {
@@ -130,12 +300,19 @@ input[type="submit"].button:active {
   .container {
     width: 1140px;
   }
+  .LoginFormContainer {
+    width: 40% !important;
+  }
 }
 @media (max-width: 570px) {
   .container {
     width: 100% !important;
     padding-left: 0px !important;
     padding-right: 0px !important;
+  }
+
+  .LoginFormContainer {
+    width: 90% !important;
   }
   .imageSide {
     display: none !important;
@@ -157,10 +334,13 @@ input[type="submit"].button:active {
   .formSide .description {
     font-size: 15px !important;
   }
-  input {
+  /* input {
     text-indent: 10px !important;
   }
   input[type="submit"].button {
     text-indent: 0px !important;
+  } */
+  .privacyText {
+    font-size: 12px !important;
   }
 }
