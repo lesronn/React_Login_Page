@@ -79,10 +79,11 @@ select {
   padding-top: 20px !important;
   font-size: inherit !important;
   /* background-color: none !important; */
-  -webkit-appearance: none !; /* Disable default iOS styling */
-  appearance: none !important;
+  /* -webkit-appearance: none !; /* Disable default iOS styling */
+  /* appearance: none !important; */
   background-color: transparent !important; /* Set background color to transparent */
   border: none !important;
+  color: black !important;
 }
 
 a {
