@@ -19,10 +19,14 @@ body {
   height: 100vh !important;
   font-family: inherit !important;
 }
-input {
-  line-height: 24px !important;
-  font-family: sans-serif !important;
-  display: block !important;
+input,
+input:before,
+input:after {
+  -webkit-user-select: initial !important;
+  -khtml-user-select: initial !important;
+  -moz-user-select: initial !important;
+  -ms-user-select: initial !important;
+  user-select: initial !important;
 }
 
 @font-face {
