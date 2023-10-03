@@ -20,8 +20,11 @@ body {
   font-family: inherit !important;
 }
 input {
-  font-family: inherit !important;
+  line-height: 24px !important;
+  font-family: sans-serif !important;
+  display: block !important;
 }
+
 @font-face {
   font-family: "SoraRegular";
   src: url("./Fonts/Sora-Reqular.woff2");
